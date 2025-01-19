@@ -600,11 +600,10 @@ if selected =="About" :
     # Text area for review
     review = st.text_area("Write your review here:", placeholder="Share your experience...")
 
-    # 5-star rating system using Streamlit's radio button
-    rating = st.radio("Rate us:", options=[5, 4, 3, 2, 1], format_func=lambda x: "★" * x)
+   
     # Submit button for the review
     if st.button("Submit Review"):
-        if review and rating:
+        if review :
             st.success(f"Thank you for your review! You rated us {rating} stars.")
         elif not review:
             st.warning("Please write a review before submitting.")
